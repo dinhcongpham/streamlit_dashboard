@@ -176,6 +176,11 @@ def merge_data_predict(df, data, flag, number_record_predict):
 
 def process_data(df, sensor, name_of_chart):
     try:
+        if sensor == 'Alkalinity (mg/l)':
+            df['sensor'] = df['sensor'].replace('COND', 'ALK')
+
+        if sensor == 'Salinity (‰)':
+            df['sensor'] = df['sensor'].replace('COND', 'SALI')
 
         # Create an area chart using Plotly Express
         fig = px.line(df.head(len(df)), x='timestamp', y='value', line_group='sensor', color='sensor',
