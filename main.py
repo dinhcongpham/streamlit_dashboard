@@ -171,6 +171,8 @@ def merge_data_predict(df, data, flag, number_record_predict):
         
         df = pd.concat([df, new_rows])
 
+        print(df)
+
         return df
 
 
