@@ -53,7 +53,7 @@ def process_sensor_data(data, sensor):
 unit_conversion = {
   'Alkalinity (mg/l)': 0.06,
   'Salinity (‰)': 0.00806,
-  'DO (mg/l)': 0.2,
+  'DO (mg/l)': 1,
   'PH': 1,
   'Temperature (°C)': 1,
   'Turbidity (NTU)': 1
